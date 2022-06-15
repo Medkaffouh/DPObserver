@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ObservableImpl implements Observable {
-    private int etat;
+    private int state;
     private List<Observer> observers = new ArrayList<>();
     @Override
     public void subscribe(Observer observer) {
@@ -22,16 +22,16 @@ public class ObservableImpl implements Observable {
     public void notifyObservers() {
         for(Observer o:observers){
             // Technique Push
-            o.update(etat);
+            o.update(state);
         }
     }
 
     public int getEtat() {
-        return etat;
+        return state;
     }
 
-    public void setEtat(int etat) {
-        this.etat = etat;
+    public void setEtat(int state) {
+        this.state = state;
         this.notifyObservers();
     }
 }
