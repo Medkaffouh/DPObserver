@@ -1,5 +1,11 @@
 package observers;
 
+import observable.Observable;
+
 public interface Observer {
-    public void update(int state);
+    // Technique Pop
+    void update(Observable observable);
+
+    // Technique Push
+    //void update(int state);
 }

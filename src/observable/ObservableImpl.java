@@ -21,8 +21,10 @@ public class ObservableImpl implements Observable {
     @Override
     public void notifyObservers() {
         for(Observer o:observers){
+            // Technique Pop
+            o.update(this);
             // Technique Push
-            o.update(state);
+            //o.update(state);
         }
     }
 

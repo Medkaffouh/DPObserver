@@ -1,3 +1,4 @@
+import observable.Observable;
 import observable.ObservableImpl;
 import observers.Observer;
 import observers.ObserverImpl1;
