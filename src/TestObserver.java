@@ -19,5 +19,13 @@ public class TestObserver {
         System.out.println("********************");
         observable.unsubscribe(observer2);
         observable.setEtat(87);
+
+        observable.subscribe(new Observer() {
+            @Override
+            public void update(Observable observable) {
+                int state=((ObservableImpl)observable).getEtat();
+                System.out.println("Observateur anonyme 1 =>"+state);
+            }
+        });
     }
 }
