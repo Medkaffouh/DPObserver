@@ -9,5 +9,6 @@ public class ObserverImpl2 implements Observer {
         else if(state-lastState<0)
             System.out.println("Observateur 2 => Depression...");
         else System.out.println("Observateur 2 => Stabilité");
+        lastState=state;
     }
 }
